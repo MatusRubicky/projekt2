@@ -1,6 +1,7 @@
 <?php
+include "config.php";
 
-$db = new mysqli('s.ics.upjs.sk','store-locator','Pas123pas','store-locator');
+$db = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
 $result = $db->query(sprintf("SELECT * from shops")) or die('Could not query');
 $jsonData = array();
